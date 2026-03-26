@@ -22,7 +22,7 @@ public class Evaluator
                 var number = string.Empty;
                 while (i < infix.Length && (char.IsDigit(infix[i]) || infix[i] == '.'))
                 {
-                    number += infix[i] + " ";
+                    number += infix[i];
                     i++;
                 }
                 tokens.Add(number);
@@ -131,7 +131,7 @@ public class Evaluator
             }
             else
             {
-                stack.Push(double.Parse(token,CultureInfo.InvariantCulture));
+                stack.Push(double.Parse(token, CultureInfo.InvariantCulture));
             }
         }
         return stack.Pop();
