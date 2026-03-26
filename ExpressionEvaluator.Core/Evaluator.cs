@@ -11,6 +11,7 @@ public class Evaluator
         return EvaluatePostfix(postfix);
     }
 
+
     private static List<string> Tokenize(string infix)
     {
         var tokens = new List<string>();
